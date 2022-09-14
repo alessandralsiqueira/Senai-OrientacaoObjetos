@@ -14,3 +14,6 @@ namespace AplicacaoPOO.Dominio
         Credito Credito { get; set; } 
     }
 }
+
+// criar um novo formulario frmCliente, adicionar 4 textbox e 4 label para
+// nome, cpf, valor do debito, valor do credito
