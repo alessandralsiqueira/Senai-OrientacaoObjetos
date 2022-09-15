@@ -32,10 +32,15 @@
             this.lblCpf = new System.Windows.Forms.Label();
             this.lblDebito = new System.Windows.Forms.Label();
             this.lblCredito = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtClienteNome = new System.Windows.Forms.TextBox();
+            this.txtClienteCpf = new System.Windows.Forms.TextBox();
             this.txtDebito = new System.Windows.Forms.TextBox();
             this.txtCredito = new System.Windows.Forms.TextBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblSaldoInicial = new System.Windows.Forms.Label();
+            this.lblSaldoInicialValor = new System.Windows.Forms.Label();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.lblSaldoValor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNome
@@ -74,43 +79,95 @@
             this.lblCredito.TabIndex = 3;
             this.lblCredito.Text = "Valor de Crédito:";
             // 
-            // txtNome
+            // txtClienteNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(61, 22);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 23);
-            this.txtNome.TabIndex = 4;
+            this.txtClienteNome.Location = new System.Drawing.Point(52, 19);
+            this.txtClienteNome.Name = "txtClienteNome";
+            this.txtClienteNome.Size = new System.Drawing.Size(266, 23);
+            this.txtClienteNome.TabIndex = 4;
             // 
-            // txtCpf
+            // txtClienteCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(68, 65);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(100, 23);
-            this.txtCpf.TabIndex = 5;
+            this.txtClienteCpf.Location = new System.Drawing.Point(40, 62);
+            this.txtClienteCpf.Name = "txtClienteCpf";
+            this.txtClienteCpf.Size = new System.Drawing.Size(100, 23);
+            this.txtClienteCpf.TabIndex = 5;
             // 
             // txtDebito
             // 
-            this.txtDebito.Location = new System.Drawing.Point(152, 105);
+            this.txtDebito.Location = new System.Drawing.Point(108, 105);
             this.txtDebito.Name = "txtDebito";
             this.txtDebito.Size = new System.Drawing.Size(100, 23);
             this.txtDebito.TabIndex = 6;
             // 
             // txtCredito
             // 
-            this.txtCredito.Location = new System.Drawing.Point(152, 147);
+            this.txtCredito.Location = new System.Drawing.Point(108, 144);
             this.txtCredito.Name = "txtCredito";
             this.txtCredito.Size = new System.Drawing.Size(100, 23);
             this.txtCredito.TabIndex = 7;
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(243, 166);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // lblSaldoInicial
+            // 
+            this.lblSaldoInicial.AutoSize = true;
+            this.lblSaldoInicial.Location = new System.Drawing.Point(364, 27);
+            this.lblSaldoInicial.Name = "lblSaldoInicial";
+            this.lblSaldoInicial.Size = new System.Drawing.Size(87, 15);
+            this.lblSaldoInicial.TabIndex = 9;
+            this.lblSaldoInicial.Text = "SALDO INICIAL";
+            this.lblSaldoInicial.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblSaldoInicialValor
+            // 
+            this.lblSaldoInicialValor.AutoSize = true;
+            this.lblSaldoInicialValor.Location = new System.Drawing.Point(396, 46);
+            this.lblSaldoInicialValor.Name = "lblSaldoInicialValor";
+            this.lblSaldoInicialValor.Size = new System.Drawing.Size(13, 15);
+            this.lblSaldoInicialValor.TabIndex = 10;
+            this.lblSaldoInicialValor.Text = "0";
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Location = new System.Drawing.Point(383, 65);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(44, 15);
+            this.lblSaldo.TabIndex = 11;
+            this.lblSaldo.Text = "SALDO";
+            // 
+            // lblSaldoValor
+            // 
+            this.lblSaldoValor.AutoSize = true;
+            this.lblSaldoValor.Location = new System.Drawing.Point(396, 90);
+            this.lblSaldoValor.Name = "lblSaldoValor";
+            this.lblSaldoValor.Size = new System.Drawing.Size(13, 15);
+            this.lblSaldoValor.TabIndex = 12;
+            this.lblSaldoValor.Text = "0";
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(581, 201);
+            this.Controls.Add(this.lblSaldoValor);
+            this.Controls.Add(this.lblSaldo);
+            this.Controls.Add(this.lblSaldoInicialValor);
+            this.Controls.Add(this.lblSaldoInicial);
+            this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txtCredito);
             this.Controls.Add(this.txtDebito);
-            this.Controls.Add(this.txtCpf);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtClienteCpf);
+            this.Controls.Add(this.txtClienteNome);
             this.Controls.Add(this.lblCredito);
             this.Controls.Add(this.lblDebito);
             this.Controls.Add(this.lblCpf);
@@ -128,9 +185,14 @@
         private Label lblCpf;
         private Label lblDebito;
         private Label lblCredito;
-        private TextBox txtNome;
-        private TextBox txtCpf;
+        private TextBox txtClienteNome;
+        private TextBox txtClienteCpf;
         private TextBox txtDebito;
         private TextBox txtCredito;
+        private Button btnCalcular;
+        private Label lblSaldoInicial;
+        private Label lblSaldoInicialValor;
+        private Label lblSaldo;
+        private Label lblSaldoValor;
     }
 }
