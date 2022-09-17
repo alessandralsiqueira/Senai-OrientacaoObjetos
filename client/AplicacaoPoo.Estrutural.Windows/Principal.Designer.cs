@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoPoo.Estrutural.Windows
 {
-    partial class Principal
+    partial class frmPrincipal
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDolar = new System.Windows.Forms.Button();
+            this.btnComissao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnDolar
             // 
-            this.button1.Location = new System.Drawing.Point(12, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cotação do Dólar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDolar.Location = new System.Drawing.Point(12, 136);
+            this.btnDolar.Name = "btnDolar";
+            this.btnDolar.Size = new System.Drawing.Size(117, 38);
+            this.btnDolar.TabIndex = 0;
+            this.btnDolar.Text = "Cotação do Dólar";
+            this.btnDolar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnComissao
             // 
-            this.button2.Location = new System.Drawing.Point(191, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Comissão de Vendas";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnComissao.Location = new System.Drawing.Point(191, 136);
+            this.btnComissao.Name = "btnComissao";
+            this.btnComissao.Size = new System.Drawing.Size(127, 38);
+            this.btnComissao.TabIndex = 1;
+            this.btnComissao.Text = "Comissão de Vendas";
+            this.btnComissao.UseVisualStyleBackColor = true;
             // 
-            // Principal
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 240);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Principal";
+            this.ClientSize = new System.Drawing.Size(330, 240);
+            this.Controls.Add(this.btnComissao);
+            this.Controls.Add(this.btnDolar);
+            this.Name = "frmPrincipal";
             this.Text = "Formulário Principal";
             this.ResumeLayout(false);
 
@@ -65,7 +65,7 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button btnDolar;
+        private Button btnComissao;
     }
-}
+} 

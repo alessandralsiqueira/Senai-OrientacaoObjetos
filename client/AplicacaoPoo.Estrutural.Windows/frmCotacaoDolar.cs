@@ -16,5 +16,18 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             InitializeComponent();
         }
+
+        private void btnConverter_Click(object sender, EventArgs e)
+        {
+            var valorAtualDolar = decimal.Parse(txtDolarHj.Text);
+            var valorEmDolar = decimal.Parse(txtValorUsuario.Text);
+
+            var resultado = valorEmDolar * valorAtualDolar;
+
+            MessageBox.Show(txtValorUsuario.Text + "dólares, corresponde a " + resultado.ToString() + "reais.");
+
+            //MessageBox.Show("Troca de valores concluída","Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    
     }
 }
