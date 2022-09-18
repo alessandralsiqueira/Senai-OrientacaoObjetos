@@ -72,6 +72,7 @@
             // txtValorUsuario
             // 
             this.txtValorUsuario.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtValorUsuario.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtValorUsuario.Location = new System.Drawing.Point(12, 117);
             this.txtValorUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtValorUsuario.Name = "txtValorUsuario";
