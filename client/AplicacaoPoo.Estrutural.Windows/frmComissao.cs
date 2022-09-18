@@ -19,14 +19,15 @@ namespace AplicacaoPoo.Estrutural.Windows
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            var valorProduto = decimal.Parse(txtValorProduto.Text);
-            var qntdVendida = decimal.Parse(txtQntd.Text);
+            double valorProduto = float.Parse(txtValorProduto.Text);
+            double qntdVendida = float.Parse(txtQntd.Text);
 
-           // int comissao = decimal.Parse(valorProduto * qntdVendida);
+            double comissao = (valorProduto * qntdVendida) * 0.05;
+            
+                //var resultado = (comissao * 0.05).ToString("N");
+            
 
-            //MessageBox.Show(comissao.ToString);
-
-            ///MessageBox.Show("Comissão calculada, será de " + comissao.ToString + " reais.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("A comissão foi calculada. Será de " + comissao + " reais.");
         }
     }
 }

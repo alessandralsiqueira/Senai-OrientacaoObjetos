@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComissao));
             this.lblVendedor = new System.Windows.Forms.Label();
             this.lblCodigoPç = new System.Windows.Forms.Label();
             this.lblValorProduto = new System.Windows.Forms.Label();
@@ -106,10 +107,10 @@
             // txtQntd
             // 
             this.txtQntd.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQntd.Location = new System.Drawing.Point(142, 131);
+            this.txtQntd.Location = new System.Drawing.Point(132, 131);
             this.txtQntd.Name = "txtQntd";
             this.txtQntd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtQntd.Size = new System.Drawing.Size(152, 27);
+            this.txtQntd.Size = new System.Drawing.Size(112, 27);
             this.txtQntd.TabIndex = 7;
             this.txtQntd.Text = "  ";
             // 
@@ -140,6 +141,7 @@
             this.Controls.Add(this.lblValorProduto);
             this.Controls.Add(this.lblCodigoPç);
             this.Controls.Add(this.lblVendedor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmComissao";
             this.Text = "Comissão de Vendas";
             this.ResumeLayout(false);
