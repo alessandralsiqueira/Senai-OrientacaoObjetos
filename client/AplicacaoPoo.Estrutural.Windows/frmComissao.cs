@@ -17,6 +17,17 @@ namespace AplicacaoPoo.Estrutural.Windows
             InitializeComponent();
         }
 
-        
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            double valorProduto = float.Parse(txtValorProduto.Text);
+            double qntdVendida = float.Parse(txtQntd.Text);
+
+            double comissao = (valorProduto * qntdVendida) * 0.05;
+            
+                //var resultado = (comissao * 0.05).ToString("N");
+            
+
+            MessageBox.Show("A comissão foi calculada. Será de " + comissao + " reais.");
+        }
     }
 }

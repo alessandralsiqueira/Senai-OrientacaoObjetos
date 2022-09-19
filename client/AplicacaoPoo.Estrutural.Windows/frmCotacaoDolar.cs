@@ -24,10 +24,10 @@ namespace AplicacaoPoo.Estrutural.Windows
 
             var resultado = valorEmDolar * valorAtualDolar;
 
-            MessageBox.Show(txtValorUsuario.Text + "dólares, corresponde a " + resultado.ToString() + "reais.");
+            MessageBox.Show(txtValorUsuario.Text + " dólar(es), corresponde a " + resultado.ToString() + " reais.");
 
             //MessageBox.Show("Troca de valores concluída","Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    
+
     }
 }
