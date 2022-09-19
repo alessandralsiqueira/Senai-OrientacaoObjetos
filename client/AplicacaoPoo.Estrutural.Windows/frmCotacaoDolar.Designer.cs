@@ -62,11 +62,7 @@
             // 
             // txtDolarHj
             // 
-            this.txtDolarHj.BackColor = System.Drawing.Color.White;
-            this.txtDolarHj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDolarHj.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDolarHj.Location = new System.Drawing.Point(12, 51);
-            this.txtDolarHj.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDolarHj.Location = new System.Drawing.Point(188, 30);
             this.txtDolarHj.Name = "txtDolarHj";
             this.txtDolarHj.Size = new System.Drawing.Size(104, 27);
             this.txtDolarHj.TabIndex = 2;
@@ -106,9 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(240, 268);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(396, 274);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.txtValorUsuario);
             this.Controls.Add(this.txtDolarHj);
@@ -120,7 +114,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCotacaoDolar";
             this.Text = "Cotação do Dólar";
-           
             this.ResumeLayout(false);
             this.PerformLayout();
 
