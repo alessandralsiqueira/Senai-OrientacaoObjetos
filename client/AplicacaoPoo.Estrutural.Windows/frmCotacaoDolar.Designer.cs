@@ -68,6 +68,7 @@
             this.txtDolarHj.Size = new System.Drawing.Size(147, 27);
             this.txtDolarHj.TabIndex = 2;
             this.txtDolarHj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDolarHj.TextChanged += new System.EventHandler(this.txtDolarHj_TextChanged);
             // 
             // txtValorUsuario
             // 
@@ -78,6 +79,7 @@
             this.txtValorUsuario.Name = "txtValorUsuario";
             this.txtValorUsuario.Size = new System.Drawing.Size(147, 27);
             this.txtValorUsuario.TabIndex = 3;
+            this.txtValorUsuario.TextChanged += new System.EventHandler(this.txtValorUsuario_TextChanged);
             // 
             // btnConverter
             // 

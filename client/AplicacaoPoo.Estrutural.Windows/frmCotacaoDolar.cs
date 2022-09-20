@@ -15,6 +15,7 @@ namespace AplicacaoPoo.Estrutural.Windows
         public frmCotacaoDolar()
         {
             InitializeComponent();
+            btnConverter.Enabled = false;
         }
 
         private void btnConverter_Click(object sender, EventArgs e)
@@ -29,6 +30,34 @@ namespace AplicacaoPoo.Estrutural.Windows
             //MessageBox.Show("Troca de valores concluída","Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-      
+        private void txtDolarHj_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var resultado = decimal.Parse(txtDolarHj.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Digite um valor decimal.");
+                txtDolarHj.Focus();
+                throw;
+            }
+
+
+        }
+
+        private void txtValorUsuario_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var resultado = decimal.Parse(txtValorUsuario.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Digite um valor decimal.");
+                txtValorUsuario.Focus();
+                throw;
+            }
+        }
     }
 }
