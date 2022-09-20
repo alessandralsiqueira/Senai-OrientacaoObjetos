@@ -12,6 +12,8 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmCotacaoDolar : Form
     {
+        private bool DolarHjEhValido;
+        private bool ValorUsuarioValido;
         public frmCotacaoDolar()
         {
             InitializeComponent();
@@ -35,13 +37,15 @@ namespace AplicacaoPoo.Estrutural.Windows
             try
             {
                 var resultado = decimal.Parse(txtDolarHj.Text);
+                DolarHjEhValido = true;
             }
             catch (Exception)
             {
                 MessageBox.Show("Digite um valor decimal.");
                 txtDolarHj.Focus();
+                DolarHjEhValido = false;
                 throw;
-            }
+            } 
 
 
         }
@@ -51,12 +55,20 @@ namespace AplicacaoPoo.Estrutural.Windows
             try
             {
                 var resultado = decimal.Parse(txtValorUsuario.Text);
+                ValorUsuarioValido = true;
+                if (DolarHjEhValido && ValorUsuarioValido)
+                {
+                    btnConverter.Enabled = true;
+                }
+               
             }
             catch (Exception)
             {
                 MessageBox.Show("Digite um valor decimal.");
                 txtValorUsuario.Focus();
-                throw;
+                ValorUsuarioValido = false;
+                btnConverter.Enabled = false;
+                
             }
         }
     }

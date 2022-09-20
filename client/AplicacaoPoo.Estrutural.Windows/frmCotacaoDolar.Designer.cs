@@ -79,6 +79,7 @@
             this.txtValorUsuario.Name = "txtValorUsuario";
             this.txtValorUsuario.Size = new System.Drawing.Size(147, 27);
             this.txtValorUsuario.TabIndex = 3;
+            this.txtValorUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtValorUsuario.TextChanged += new System.EventHandler(this.txtValorUsuario_TextChanged);
             // 
             // btnConverter
