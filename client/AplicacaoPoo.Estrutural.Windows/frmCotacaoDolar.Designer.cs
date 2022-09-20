@@ -35,14 +35,14 @@
             this.txtValorUsuario = new System.Windows.Forms.TextBox();
             this.btnConverter = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ResumeLayout();
+            this.SuspendLayout();
             // 
             // lblDolarHoje
             // 
             this.lblDolarHoje.AutoSize = true;
             this.lblDolarHoje.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDolarHoje.Location = new System.Drawing.Point(8, 28);
-            this.lblDolarHoje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDolarHoje.Location = new System.Drawing.Point(11, 37);
+            this.lblDolarHoje.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDolarHoje.Name = "lblDolarHoje";
             this.lblDolarHoje.Size = new System.Drawing.Size(179, 19);
             this.lblDolarHoje.TabIndex = 0;
@@ -53,8 +53,8 @@
             // 
             this.lblValorUsuario.AutoSize = true;
             this.lblValorUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblValorUsuario.Location = new System.Drawing.Point(8, 94);
-            this.lblValorUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValorUsuario.Location = new System.Drawing.Point(11, 103);
+            this.lblValorUsuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblValorUsuario.Name = "lblValorUsuario";
             this.lblValorUsuario.Size = new System.Drawing.Size(225, 19);
             this.lblValorUsuario.TabIndex = 1;
@@ -62,9 +62,10 @@
             // 
             // txtDolarHj
             // 
-            this.txtDolarHj.Location = new System.Drawing.Point(188, 30);
+            this.txtDolarHj.Location = new System.Drawing.Point(13, 60);
+            this.txtDolarHj.Margin = new System.Windows.Forms.Padding(4);
             this.txtDolarHj.Name = "txtDolarHj";
-            this.txtDolarHj.Size = new System.Drawing.Size(104, 27);
+            this.txtDolarHj.Size = new System.Drawing.Size(147, 27);
             this.txtDolarHj.TabIndex = 2;
             this.txtDolarHj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -72,19 +73,19 @@
             // 
             this.txtValorUsuario.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtValorUsuario.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtValorUsuario.Location = new System.Drawing.Point(12, 117);
-            this.txtValorUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValorUsuario.Location = new System.Drawing.Point(13, 127);
+            this.txtValorUsuario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtValorUsuario.Name = "txtValorUsuario";
-            this.txtValorUsuario.Size = new System.Drawing.Size(104, 27);
+            this.txtValorUsuario.Size = new System.Drawing.Size(147, 27);
             this.txtValorUsuario.TabIndex = 3;
             // 
             // btnConverter
             // 
             this.btnConverter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConverter.Location = new System.Drawing.Point(8, 190);
-            this.btnConverter.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConverter.Location = new System.Drawing.Point(11, 183);
+            this.btnConverter.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnConverter.Name = "btnConverter";
-            this.btnConverter.Size = new System.Drawing.Size(174, 65);
+            this.btnConverter.Size = new System.Drawing.Size(249, 87);
             this.btnConverter.TabIndex = 4;
             this.btnConverter.Text = "CONVERTER";
             this.btnConverter.UseVisualStyleBackColor = true;
@@ -95,14 +96,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(82, 151);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 5;
             // 
             // frmCotacaoDolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 274);
+            this.ClientSize = new System.Drawing.Size(295, 289);
             this.Controls.Add(this.btnConverter);
             this.Controls.Add(this.txtValorUsuario);
             this.Controls.Add(this.txtDolarHj);
