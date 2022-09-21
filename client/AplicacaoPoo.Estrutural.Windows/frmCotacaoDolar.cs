@@ -17,7 +17,7 @@ namespace AplicacaoPoo.Estrutural.Windows
         public frmCotacaoDolar()
         {
             InitializeComponent();
-            btnConverter.Enabled = false;
+            HabilitarOuDesabilitarBotaoCalcularConversao();
         }
 
         private void btnConverter_Click(object sender, EventArgs e)
@@ -29,7 +29,6 @@ namespace AplicacaoPoo.Estrutural.Windows
 
             MessageBox.Show(txtValorUsuario.Text + " dólar(es), corresponde a " + resultado.ToString() + " reais.");
 
-            //MessageBox.Show("Troca de valores concluída","Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void txtDolarHj_TextChanged(object sender, EventArgs e)
@@ -38,15 +37,16 @@ namespace AplicacaoPoo.Estrutural.Windows
             {
                 var resultado = decimal.Parse(txtDolarHj.Text);
                 DolarHjEhValido = true;
+                HabilitarOuDesabilitarBotaoCalcularConversao();
             }
             catch (Exception)
             {
                 MessageBox.Show("Digite um valor decimal.");
                 txtDolarHj.Focus();
                 DolarHjEhValido = false;
-                throw;
+                HabilitarOuDesabilitarBotaoCalcularConversao();
+               
             } 
-
 
         }
 
@@ -56,19 +56,28 @@ namespace AplicacaoPoo.Estrutural.Windows
             {
                 var resultado = decimal.Parse(txtValorUsuario.Text);
                 ValorUsuarioValido = true;
-                if (DolarHjEhValido && ValorUsuarioValido)
-                {
-                    btnConverter.Enabled = true;
-                }
-               
+                HabilitarOuDesabilitarBotaoCalcularConversao();
+
             }
             catch (Exception)
             {
                 MessageBox.Show("Digite um valor decimal.");
                 txtValorUsuario.Focus();
                 ValorUsuarioValido = false;
+                HabilitarOuDesabilitarBotaoCalcularConversao();
+
+
+            }
+        } 
+        private void HabilitarOuDesabilitarBotaoCalcularConversao()
+        {
+            if (DolarHjEhValido && ValorUsuarioValido)
+            {
+                btnConverter.Enabled = true;
+            }
+            else
+            {
                 btnConverter.Enabled = false;
-                
             }
         }
     }
