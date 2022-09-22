@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacaoPOO.Dominio.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,36 +18,17 @@ namespace AplicacaoPoo.Estrutural.Windows
         public frmCotacaoDolar()
         {
             InitializeComponent();
-            HabilitarOuDesabilitarBotaoCalcularConversao();
+            btnConverter.Enabled = false;
         }
 
         private void btnConverter_Click(object sender, EventArgs e)
         {
-            var valorAtualDolar = decimal.Parse(txtDolarHj.Text);
             var valorEmDolar = decimal.Parse(txtValorUsuario.Text);
+            var moeda = new ConverterMoedaService();
+            var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
 
-            var resultado = valorEmDolar * valorAtualDolar;
-
-            MessageBox.Show(txtValorUsuario.Text + " dólar(es), corresponde a " + resultado.ToString() + " reais.");
-
-        }
-
-        private void txtDolarHj_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                var resultado = decimal.Parse(txtDolarHj.Text);
-                DolarHjEhValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Digite um valor decimal.");
-                txtDolarHj.Focus();
-                DolarHjEhValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-               
-            } 
+            //string interpolation
+            MessageBox.Show($"Valor convertido é: {resultado} em dólares.");
 
         }
 
@@ -54,31 +36,25 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             try
             {
+                if(txtValorUsuario.Text == "")
+                {
+                    btnConverter.Enabled = false;
+                    return;
+                } 
+
                 var resultado = decimal.Parse(txtValorUsuario.Text);
-                ValorUsuarioValido = true;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
+                btnConverter.Enabled = true;
 
             }
             catch (Exception)
             {
                 MessageBox.Show("Digite um valor decimal.");
                 txtValorUsuario.Focus();
-                ValorUsuarioValido = false;
-                HabilitarOuDesabilitarBotaoCalcularConversao();
-
-
-            }
-        } 
-        private void HabilitarOuDesabilitarBotaoCalcularConversao()
-        {
-            if (DolarHjEhValido && ValorUsuarioValido)
-            {
-                btnConverter.Enabled = true;
-            }
-            else
-            {
                 btnConverter.Enabled = false;
+
             }
+
         }
+
     }
 }
