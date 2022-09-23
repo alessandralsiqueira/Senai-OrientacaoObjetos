@@ -13,7 +13,7 @@ namespace AplicacaoPOO.Dominio.Services
     //exemplo usando classe instaciada
     public class ConverterMoedaService
     {
-        decimal CotacaoDolar = 5.25m;
+        decimal CotacaoDolar = 5.12m;
         decimal CotacaoLibra = 6.15m;
         decimal CoatacaoEuro = 6.0m;
 

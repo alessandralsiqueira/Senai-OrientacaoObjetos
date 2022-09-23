@@ -29,47 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCotacaoDolar));
-            this.lblValorUsuario = new System.Windows.Forms.Label();
+            this.lblPrimeiroValor = new System.Windows.Forms.Label();
             this.txtValorUsuario = new System.Windows.Forms.TextBox();
-            this.btnConverter = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblSegundoValor = new System.Windows.Forms.Label();
+            this.cmbMoedas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // lblValorUsuario
+            // lblPrimeiroValor
             // 
-            this.lblValorUsuario.AutoSize = true;
-            this.lblValorUsuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblValorUsuario.Location = new System.Drawing.Point(11, 26);
-            this.lblValorUsuario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblValorUsuario.Name = "lblValorUsuario";
-            this.lblValorUsuario.Size = new System.Drawing.Size(225, 19);
-            this.lblValorUsuario.TabIndex = 1;
-            this.lblValorUsuario.Text = "Digite o valor que deseja converter:";
+            this.lblPrimeiroValor.AutoSize = true;
+            this.lblPrimeiroValor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrimeiroValor.ForeColor = System.Drawing.Color.White;
+            this.lblPrimeiroValor.Location = new System.Drawing.Point(15, 28);
+            this.lblPrimeiroValor.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblPrimeiroValor.Name = "lblPrimeiroValor";
+            this.lblPrimeiroValor.Size = new System.Drawing.Size(0, 19);
+            this.lblPrimeiroValor.TabIndex = 1;
             // 
             // txtValorUsuario
             // 
-            this.txtValorUsuario.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtValorUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtValorUsuario.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtValorUsuario.Location = new System.Drawing.Point(25, 50);
+            this.txtValorUsuario.Location = new System.Drawing.Point(15, 104);
             this.txtValorUsuario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtValorUsuario.Name = "txtValorUsuario";
-            this.txtValorUsuario.Size = new System.Drawing.Size(147, 27);
+            this.txtValorUsuario.PlaceholderText = "Informe o valor em dólar:";
+            this.txtValorUsuario.Size = new System.Drawing.Size(193, 29);
             this.txtValorUsuario.TabIndex = 3;
             this.txtValorUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtValorUsuario.TextChanged += new System.EventHandler(this.txtValorUsuario_TextChanged);
-            // 
-            // btnConverter
-            // 
-            this.btnConverter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConverter.Location = new System.Drawing.Point(11, 113);
-            this.btnConverter.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnConverter.Name = "btnConverter";
-            this.btnConverter.Size = new System.Drawing.Size(249, 87);
-            this.btnConverter.TabIndex = 4;
-            this.btnConverter.Text = "CONVERTER";
-            this.btnConverter.UseVisualStyleBackColor = true;
-            this.btnConverter.UseWaitCursor = true;
-            this.btnConverter.Click += new System.EventHandler(this.btnConverter_Click);
             // 
             // textBox1
             // 
@@ -78,14 +67,40 @@
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 5;
             // 
+            // lblSegundoValor
+            // 
+            this.lblSegundoValor.AutoSize = true;
+            this.lblSegundoValor.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSegundoValor.ForeColor = System.Drawing.Color.White;
+            this.lblSegundoValor.Location = new System.Drawing.Point(15, 58);
+            this.lblSegundoValor.Name = "lblSegundoValor";
+            this.lblSegundoValor.Size = new System.Drawing.Size(0, 30);
+            this.lblSegundoValor.TabIndex = 5;
+            // 
+            // cmbMoedas
+            // 
+            this.cmbMoedas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbMoedas.FormattingEnabled = true;
+            this.cmbMoedas.Items.AddRange(new object[] {
+            "Dólar Americano",
+            "Euro",
+            "Libra Esterlina"});
+            this.cmbMoedas.Location = new System.Drawing.Point(15, 151);
+            this.cmbMoedas.Name = "cmbMoedas";
+            this.cmbMoedas.Size = new System.Drawing.Size(121, 25);
+            this.cmbMoedas.TabIndex = 6;
+            this.cmbMoedas.SelectedIndexChanged += new System.EventHandler(this.cmbMoedas_SelectedIndexChanged);
+            // 
             // frmCotacaoDolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 229);
-            this.Controls.Add(this.btnConverter);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(292, 229);
+            this.Controls.Add(this.cmbMoedas);
+            this.Controls.Add(this.lblSegundoValor);
             this.Controls.Add(this.txtValorUsuario);
-            this.Controls.Add(this.lblValorUsuario);
+            this.Controls.Add(this.lblPrimeiroValor);
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -98,9 +113,10 @@
         }
 
         #endregion
-        private Label lblValorUsuario;
+        private Label lblPrimeiroValor;
         private TextBox txtValorUsuario;
-        private Button btnConverter;
         private TextBox textBox1;
+        private Label lblSegundoValor;
+        private ComboBox cmbMoedas;
     }
 }

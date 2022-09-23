@@ -1,4 +1,5 @@
-﻿using AplicacaoPOO.Dominio.Services;
+﻿using AplicacaoPOO.Dominio.Helpers;
+using AplicacaoPOO.Dominio.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,48 +14,41 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmCotacaoDolar : Form
     {
-        private bool DolarHjEhValido;
-        private bool ValorUsuarioValido;
+       
         public frmCotacaoDolar()
         {
             InitializeComponent();
-            btnConverter.Enabled = false;
-        }
 
-        private void btnConverter_Click(object sender, EventArgs e)
-        {
-            var valorEmDolar = decimal.Parse(txtValorUsuario.Text);
-            var moeda = new ConverterMoedaService();
-            var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
-
-            //string interpolation
-            MessageBox.Show($"Valor convertido é: {resultado} em dólares.");
-
+            lblPrimeiroValor.Text = $"1 {MoedaHelper.Dolar} igual a";
+            lblSegundoValor.Text = $"5,12 {MoedaHelper.Real}";
         }
 
         private void txtValorUsuario_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if(txtValorUsuario.Text == "")
-                {
-                    btnConverter.Enabled = false;
-                    return;
-                } 
+                if (txtValorUsuario.Text == "") return;
+                
+                var valorEmDolar = decimal.Parse(txtValorUsuario.Text);
 
-                var resultado = decimal.Parse(txtValorUsuario.Text);
-                btnConverter.Enabled = true;
+                var moeda = new ConverterMoedaService();
+                var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
+                lblPrimeiroValor.Text = $"{valorEmDolar} {MoedaHelper.Dolar} igual a";
+                lblSegundoValor.Text = $"{resultado} {MoedaHelper.Real}";
 
             }
             catch (Exception)
             {
                 MessageBox.Show("Digite um valor decimal.");
                 txtValorUsuario.Focus();
-                btnConverter.Enabled = false;
+                
 
             }
 
         }
+        private void cmbMoedas_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
