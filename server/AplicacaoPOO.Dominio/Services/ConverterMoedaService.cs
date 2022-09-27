@@ -14,23 +14,26 @@ namespace AplicacaoPOO.Dominio.Services
     public class ConverterMoedaService
     {
         decimal CotacaoDolar = 5.12m;
+        decimal CotacaoEuro = 6.0m;
         decimal CotacaoLibra = 6.15m;
-        decimal CoatacaoEuro = 6.0m;
+        
 
         public decimal ConverterDolarEmReal(decimal valor)
+        
         {
             return valor * CotacaoDolar;
 
         }
 
-        public decimal ConverterLibrasEmReal(decimal valor)
+        public decimal ConverterEuroEmReal(decimal valor)
+        {
+            return valor * CotacaoEuro;
+        }
+
+        public decimal ConverterLibraEmReal(decimal valor)
         { 
             return valor * CotacaoLibra;
         }
 
-        public decimal ConverterEuroEmReal(decimal valor)
-        {
-            return valor * CoatacaoEuro;
-        }
-    }
+    }  
 }

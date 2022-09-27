@@ -54,10 +54,9 @@
             this.txtValorUsuario.Location = new System.Drawing.Point(15, 104);
             this.txtValorUsuario.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtValorUsuario.Name = "txtValorUsuario";
-            this.txtValorUsuario.PlaceholderText = "Informe o valor em dólar:";
-            this.txtValorUsuario.Size = new System.Drawing.Size(193, 29);
+            this.txtValorUsuario.PlaceholderText = "Informe o valor:";
+            this.txtValorUsuario.Size = new System.Drawing.Size(167, 29);
             this.txtValorUsuario.TabIndex = 3;
-            this.txtValorUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtValorUsuario.TextChanged += new System.EventHandler(this.txtValorUsuario_TextChanged);
             // 
             // textBox1
@@ -79,15 +78,12 @@
             // 
             // cmbMoedas
             // 
+            this.cmbMoedas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMoedas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbMoedas.FormattingEnabled = true;
-            this.cmbMoedas.Items.AddRange(new object[] {
-            "Dólar Americano",
-            "Euro",
-            "Libra Esterlina"});
             this.cmbMoedas.Location = new System.Drawing.Point(15, 151);
             this.cmbMoedas.Name = "cmbMoedas";
-            this.cmbMoedas.Size = new System.Drawing.Size(121, 25);
+            this.cmbMoedas.Size = new System.Drawing.Size(167, 25);
             this.cmbMoedas.TabIndex = 6;
             this.cmbMoedas.SelectedIndexChanged += new System.EventHandler(this.cmbMoedas_SelectedIndexChanged);
             // 
