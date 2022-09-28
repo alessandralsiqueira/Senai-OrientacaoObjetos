@@ -1,6 +1,6 @@
 ﻿namespace AplicacaoPoo.Estrutural.Windows
 {
-    partial class frmCotacaoDolar
+    partial class frmConversorMoeda
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCotacaoDolar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConversorMoeda));
             this.lblPrimeiroValor = new System.Windows.Forms.Label();
             this.txtValorUsuario = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -87,7 +87,7 @@
             this.cmbMoedas.TabIndex = 6;
             this.cmbMoedas.SelectedIndexChanged += new System.EventHandler(this.cmbMoedas_SelectedIndexChanged);
             // 
-            // frmCotacaoDolar
+            // frmConversorMoeda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +101,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmCotacaoDolar";
+            this.Name = "frmConversorMoeda";
             this.Text = "Cotação do Dólar";
             this.ResumeLayout(false);
             this.PerformLayout();
