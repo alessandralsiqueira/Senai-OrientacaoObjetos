@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace AplicacaoPoo.Estrutural.Windows
 {
-    public partial class frmCotacaoDolar : Form
+    public partial class frmConversorMoeda : Form
     {
 
-        public frmCotacaoDolar()
+        public frmConversorMoeda()
         {
             InitializeComponent();
 
