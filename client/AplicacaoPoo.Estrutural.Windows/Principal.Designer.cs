@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.btnDolar = new System.Windows.Forms.Button();
-            this.btnComissao = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.conversorDeMoedasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comissionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,36 +37,6 @@
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnDolar
-            // 
-            this.btnDolar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDolar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDolar.Image = ((System.Drawing.Image)(resources.GetObject("btnDolar.Image")));
-            this.btnDolar.Location = new System.Drawing.Point(12, 36);
-            this.btnDolar.Name = "btnDolar";
-            this.btnDolar.Size = new System.Drawing.Size(151, 162);
-            this.btnDolar.TabIndex = 0;
-            this.btnDolar.Text = "Conversor de Moedas";
-            this.btnDolar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDolar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDolar.UseVisualStyleBackColor = true;
-            this.btnDolar.Click += new System.EventHandler(this.btnAbrirFormDolar_Click);
-            // 
-            // btnComissao
-            // 
-            this.btnComissao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComissao.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnComissao.Image = ((System.Drawing.Image)(resources.GetObject("btnComissao.Image")));
-            this.btnComissao.Location = new System.Drawing.Point(169, 36);
-            this.btnComissao.Name = "btnComissao";
-            this.btnComissao.Size = new System.Drawing.Size(151, 162);
-            this.btnComissao.TabIndex = 1;
-            this.btnComissao.Text = "Comissão de Vendas";
-            this.btnComissao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnComissao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnComissao.UseVisualStyleBackColor = true;
-            this.btnComissao.Click += new System.EventHandler(this.btnAbrirFormComissao_Click);
             // 
             // menuStrip1
             // 
@@ -123,8 +91,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(374, 238);
-            this.Controls.Add(this.btnComissao);
-            this.Controls.Add(this.btnDolar);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -141,9 +107,6 @@
         }
 
         #endregion
-
-        private Button btnDolar;
-        private Button btnComissao;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem conversorDeMoedasToolStripMenuItem;
         private ToolStripMenuItem comissionamentoToolStripMenuItem;

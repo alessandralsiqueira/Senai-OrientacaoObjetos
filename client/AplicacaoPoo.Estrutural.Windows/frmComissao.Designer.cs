@@ -36,7 +36,7 @@
             this.txtVendedor = new System.Windows.Forms.TextBox();
             this.txtCodigoPç = new System.Windows.Forms.TextBox();
             this.txtValorProduto = new System.Windows.Forms.TextBox();
-            this.txtQntd = new System.Windows.Forms.TextBox();
+            this.txtQntdVendas = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -106,13 +106,13 @@
             // 
             // txtQntd
             // 
-            this.txtQntd.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQntd.Location = new System.Drawing.Point(132, 140);
-            this.txtQntd.Name = "txtQntd";
-            this.txtQntd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtQntd.Size = new System.Drawing.Size(112, 27);
-            this.txtQntd.TabIndex = 7;
-            this.txtQntd.Text = "  ";
+            this.txtQntdVendas.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtQntdVendas.Location = new System.Drawing.Point(132, 140);
+            this.txtQntdVendas.Name = "txtQntd";
+            this.txtQntdVendas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtQntdVendas.Size = new System.Drawing.Size(112, 27);
+            this.txtQntdVendas.TabIndex = 7;
+            this.txtQntdVendas.Text = "  ";
             // 
             // btnCalcular
             // 
@@ -133,7 +133,7 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(288, 260);
             this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.txtQntd);
+            this.Controls.Add(this.txtQntdVendas);
             this.Controls.Add(this.txtValorProduto);
             this.Controls.Add(this.txtCodigoPç);
             this.Controls.Add(this.txtVendedor);
@@ -145,6 +145,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmComissao";
             this.Text = "Comissão de Vendas";
+            this.Load += new System.EventHandler(this.frmComissao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,7 +160,7 @@
         private TextBox txtVendedor;
         private TextBox txtCodigoPç;
         private TextBox txtValorProduto;
-        private TextBox txtQntd;
+        private TextBox txtQntdVendas;
         private Button btnCalcular;
     }
 }
