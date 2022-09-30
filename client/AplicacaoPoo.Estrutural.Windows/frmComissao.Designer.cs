@@ -145,7 +145,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmComissao";
             this.Text = "Comissão de Vendas";
-            this.Load += new System.EventHandler(this.frmComissao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
