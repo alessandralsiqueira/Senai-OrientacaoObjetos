@@ -29,119 +29,110 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComissao));
-            this.lblVendedor = new System.Windows.Forms.Label();
-            this.lblCodigoPç = new System.Windows.Forms.Label();
-            this.lblValorProduto = new System.Windows.Forms.Label();
-            this.lblQntd = new System.Windows.Forms.Label();
-            this.txtVendedor = new System.Windows.Forms.TextBox();
-            this.txtCodigoPç = new System.Windows.Forms.TextBox();
+            this.lblIdVendedor = new System.Windows.Forms.Label();
+            this.txtCodigoPc = new System.Windows.Forms.TextBox();
             this.txtValorProduto = new System.Windows.Forms.TextBox();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.mtbData = new System.Windows.Forms.MaskedTextBox();
+            this.cmbVendedorCadastrado = new System.Windows.Forms.ComboBox();
+            this.ltbListaDePecas = new System.Windows.Forms.ListBox();
             this.txtQntdVendas = new System.Windows.Forms.TextBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblVendedor
+            // lblIdVendedor
             // 
-            this.lblVendedor.AutoSize = true;
-            this.lblVendedor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblVendedor.Location = new System.Drawing.Point(-1, 22);
-            this.lblVendedor.Name = "lblVendedor";
-            this.lblVendedor.Size = new System.Drawing.Size(89, 19);
-            this.lblVendedor.TabIndex = 0;
-            this.lblVendedor.Text = "ID Vendedor:";
+            this.lblIdVendedor.AutoSize = true;
+            this.lblIdVendedor.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblIdVendedor.Location = new System.Drawing.Point(6, 22);
+            this.lblIdVendedor.Name = "lblIdVendedor";
+            this.lblIdVendedor.Size = new System.Drawing.Size(74, 17);
+            this.lblIdVendedor.TabIndex = 0;
+            this.lblIdVendedor.Text = "Vendedor:";
             // 
-            // lblCodigoPç
+            // txtCodigoPc
             // 
-            this.lblCodigoPç.AutoSize = true;
-            this.lblCodigoPç.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCodigoPç.Location = new System.Drawing.Point(-1, 65);
-            this.lblCodigoPç.Name = "lblCodigoPç";
-            this.lblCodigoPç.Size = new System.Drawing.Size(130, 19);
-            this.lblCodigoPç.TabIndex = 1;
-            this.lblCodigoPç.Text = "Código do Produto:";
-            // 
-            // lblValorProduto
-            // 
-            this.lblValorProduto.AutoSize = true;
-            this.lblValorProduto.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblValorProduto.Location = new System.Drawing.Point(-1, 103);
-            this.lblValorProduto.Name = "lblValorProduto";
-            this.lblValorProduto.Size = new System.Drawing.Size(117, 19);
-            this.lblValorProduto.TabIndex = 2;
-            this.lblValorProduto.Text = "Valor do Produto:";
-            // 
-            // lblQntd
-            // 
-            this.lblQntd.AutoSize = true;
-            this.lblQntd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblQntd.Location = new System.Drawing.Point(-1, 145);
-            this.lblQntd.Name = "lblQntd";
-            this.lblQntd.Size = new System.Drawing.Size(137, 19);
-            this.lblQntd.TabIndex = 3;
-            this.lblQntd.Text = "Quantidade Vendida:";
-            // 
-            // txtVendedor
-            // 
-            this.txtVendedor.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtVendedor.Location = new System.Drawing.Point(85, 22);
-            this.txtVendedor.Name = "txtVendedor";
-            this.txtVendedor.Size = new System.Drawing.Size(159, 27);
-            this.txtVendedor.TabIndex = 4;
-            // 
-            // txtCodigoPç
-            // 
-            this.txtCodigoPç.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodigoPç.Location = new System.Drawing.Point(126, 64);
-            this.txtCodigoPç.Name = "txtCodigoPç";
-            this.txtCodigoPç.Size = new System.Drawing.Size(118, 27);
-            this.txtCodigoPç.TabIndex = 5;
+            this.txtCodigoPc.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigoPc.Location = new System.Drawing.Point(6, 66);
+            this.txtCodigoPc.Name = "txtCodigoPc";
+            this.txtCodigoPc.PlaceholderText = "Código da Peça";
+            this.txtCodigoPc.Size = new System.Drawing.Size(134, 24);
+            this.txtCodigoPc.TabIndex = 5;
+            this.txtCodigoPc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtValorProduto
             // 
-            this.txtValorProduto.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtValorProduto.Location = new System.Drawing.Point(112, 103);
+            this.txtValorProduto.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtValorProduto.Location = new System.Drawing.Point(5, 96);
             this.txtValorProduto.Name = "txtValorProduto";
-            this.txtValorProduto.Size = new System.Drawing.Size(132, 27);
+            this.txtValorProduto.PlaceholderText = "Valor Unitário";
+            this.txtValorProduto.Size = new System.Drawing.Size(134, 24);
             this.txtValorProduto.TabIndex = 6;
+            this.txtValorProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtQntd
+            // btnAdicionar
             // 
-            this.txtQntdVendas.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQntdVendas.Location = new System.Drawing.Point(132, 140);
-            this.txtQntdVendas.Name = "txtQntd";
-            this.txtQntdVendas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtQntdVendas.Size = new System.Drawing.Size(112, 27);
-            this.txtQntdVendas.TabIndex = 7;
-            this.txtQntdVendas.Text = "  ";
+            this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAdicionar.Location = new System.Drawing.Point(5, 215);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(125, 33);
+            this.btnAdicionar.TabIndex = 8;
+            this.btnAdicionar.Text = "ADICIONAR";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
-            // btnCalcular
+            // mtbData
             // 
-            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcular.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCalcular.Location = new System.Drawing.Point(12, 204);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(259, 44);
-            this.btnCalcular.TabIndex = 8;
-            this.btnCalcular.Text = "CALCULAR COMISSÃO";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.mtbData.Location = new System.Drawing.Point(284, 19);
+            this.mtbData.Mask = "00/00/0000";
+            this.mtbData.Name = "mtbData";
+            this.mtbData.Size = new System.Drawing.Size(82, 24);
+            this.mtbData.TabIndex = 9;
+            this.mtbData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbData.ValidatingType = typeof(System.DateTime);
+            // 
+            // cmbVendedorCadastrado
+            // 
+            this.cmbVendedorCadastrado.FormattingEnabled = true;
+            this.cmbVendedorCadastrado.Location = new System.Drawing.Point(76, 19);
+            this.cmbVendedorCadastrado.Name = "cmbVendedorCadastrado";
+            this.cmbVendedorCadastrado.Size = new System.Drawing.Size(192, 24);
+            this.cmbVendedorCadastrado.TabIndex = 10;
+            // 
+            // ltbListaDePecas
+            // 
+            this.ltbListaDePecas.FormattingEnabled = true;
+            this.ltbListaDePecas.ItemHeight = 16;
+            this.ltbListaDePecas.Location = new System.Drawing.Point(146, 66);
+            this.ltbListaDePecas.Name = "ltbListaDePecas";
+            this.ltbListaDePecas.Size = new System.Drawing.Size(260, 132);
+            this.ltbListaDePecas.TabIndex = 11;
+            // 
+            // txtQntdVendas
+            // 
+            this.txtQntdVendas.Location = new System.Drawing.Point(5, 126);
+            this.txtQntdVendas.Name = "txtQntdVendas";
+            this.txtQntdVendas.PlaceholderText = "Quantidade";
+            this.txtQntdVendas.Size = new System.Drawing.Size(134, 24);
+            this.txtQntdVendas.TabIndex = 12;
+            this.txtQntdVendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmComissao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(288, 260);
-            this.Controls.Add(this.btnCalcular);
+            this.ClientSize = new System.Drawing.Size(446, 260);
             this.Controls.Add(this.txtQntdVendas);
+            this.Controls.Add(this.ltbListaDePecas);
+            this.Controls.Add(this.cmbVendedorCadastrado);
+            this.Controls.Add(this.mtbData);
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtValorProduto);
-            this.Controls.Add(this.txtCodigoPç);
-            this.Controls.Add(this.txtVendedor);
-            this.Controls.Add(this.lblQntd);
-            this.Controls.Add(this.lblValorProduto);
-            this.Controls.Add(this.lblCodigoPç);
-            this.Controls.Add(this.lblVendedor);
-            this.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Controls.Add(this.txtCodigoPc);
+            this.Controls.Add(this.lblIdVendedor);
+            this.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmComissao";
             this.Text = "Comissão de Vendas";
@@ -152,14 +143,13 @@
 
         #endregion
 
-        private Label lblVendedor;
-        private Label lblCodigoPç;
-        private Label lblValorProduto;
-        private Label lblQntd;
-        private TextBox txtVendedor;
-        private TextBox txtCodigoPç;
+        private Label lblIdVendedor;
+        private TextBox txtCodigoPc;
         private TextBox txtValorProduto;
+        private Button btnAdicionar;
+        private MaskedTextBox mtbData;
+        private ComboBox cmbVendedorCadastrado;
+        private ListBox ltbListaDePecas;
         private TextBox txtQntdVendas;
-        private Button btnCalcular;
     }
 }
