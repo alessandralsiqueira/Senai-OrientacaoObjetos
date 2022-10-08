@@ -21,23 +21,39 @@ namespace AplicacaoPoo.Estrutural.Windows
 
         private void btnEnviarMensagem_Click(object sender, EventArgs e)
         {
-            var mensagem = new MimeMessage();
-            mensagem.From.Add(new MailboxAddress(txtNomeCompleto.Text, txtEmail.Text));
-            mensagem.To.Add(new MailboxAddress("Alessandra", "alessandra.lopesiqp@gmail.com"));
-            mensagem.Subject = txtAssunto.Text;
-            mensagem.Body = new TextPart("plain");
+            try
             {
-                Text = txtMensagem.Text;
-            }
+                btnEnviarMensagem.Enabled = false;
+                btnEnviarMensagem.UseWaitCursor = true;
 
-            using (var client = new SmtpClient())
+                var mensagem = new MimeMessage();
+                mensagem.From.Add(new MailboxAddress(txtNomeCompleto.Text, txtEmail.Text));
+                mensagem.To.Add(new MailboxAddress("Alessandra", "alessandra.lopesiqp@gmail.com"));
+                mensagem.ReplyTo.Add(new MailboxAddress(txtNomeCompleto.Text, txtEmail.Text));
+                mensagem.Subject = txtAssunto.Text;
+                mensagem.Body = new TextPart("plain");
+                {
+                    Text = txtMensagem.Text;
+                }
+
+                using (var client = new SmtpClient())
+                {
+                    client.Connect("smtp.gmail.com", 587, false);
+                    client.Authenticate("user_senai_temp@faceli.edu.br", "senai@2022");
+
+                    client.Send(mensagem);
+                    client.Disconnect(true);
+
+                }
+                btnEnviarMensagem.Enabled = true;
+                btnEnviarMensagem.UseWaitCursor = false;
+            }
+            catch (Exception ex)
             {
-                client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("alessandra.penha@aluno.senai.br", "310590Al");
-
-                client.Send(mensagem);
-                client.Disconnect(true);
+                MessageBox.Show(ex.Message);
+                throw;
             }
+           
         }
     }
 }

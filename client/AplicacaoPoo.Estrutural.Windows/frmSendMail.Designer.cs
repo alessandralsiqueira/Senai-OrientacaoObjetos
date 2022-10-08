@@ -122,6 +122,7 @@
             this.btnEnviarMensagem.TabIndex = 9;
             this.btnEnviarMensagem.Text = "Enviar Mensagem";
             this.btnEnviarMensagem.UseVisualStyleBackColor = true;
+            this.btnEnviarMensagem.Click += new System.EventHandler(this.btnEnviarMensagem_Click);
             // 
             // frmSendMail
             // 
